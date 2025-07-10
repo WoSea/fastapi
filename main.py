@@ -115,7 +115,7 @@ def custom_openapi():
     openapi_schema = get_openapi(
         title="Face Recognition API",
         version="1.0.0",
-        description="This is a very usefull API from SCS SOLUTIONS",
+        description="This is a very usefull API from SOLUTIONS",
         routes=app.routes,
     )
     openapi_schema["info"]["x-logo"] = {

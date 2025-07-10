@@ -34,14 +34,14 @@ fake_users_db = {
     "scs1": {
         "username": "scs1",
         "full_name": "Admin Account",
-        "email": "duy.pham@scssolutions.io",
+        "email": "duy.pham@solutions.io",
         "hashed_password": "fakehashedsecret", #secret
         "disabled": False,
     },
     "scs2": {
         "username": "scs2",
         "full_name": "Member Account",
-        "email": "huy.pham@scssolutions.io",
+        "email": "huy.pham@solutions.io",
         "hashed_password": "fakehashedsecret2", #secret2
         "disabled": True,
     },
@@ -74,7 +74,7 @@ fake_data_face = {
     },
 }
 #app = FastAPI(docs_url=None, redoc_url=None)
-app = FastAPI(title="SCS Solutions")
+app = FastAPI(title="Solutions")
 
 def fake_hash_password(password: str):
     return "fakehashed" + password
@@ -119,7 +119,7 @@ def custom_openapi():
         routes=app.routes,
     )
     openapi_schema["info"]["x-logo"] = {
-        "url": "https://scssolutions.io/wp-content/uploads/2020/10/SCS_Logo_original_icon.png"
+        "url": "https://solutions.io/_Logo_original_icon.png"
     }
     app.openapi_schema = openapi_schema
     return app.openapi_schema
